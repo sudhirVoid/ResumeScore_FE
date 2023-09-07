@@ -9,6 +9,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { JobPageComponent } from './job-page/job-page.component';
 import { JobmodalComponent } from './jobmodal/jobmodal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     JobPageComponent,
     JobmodalComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
