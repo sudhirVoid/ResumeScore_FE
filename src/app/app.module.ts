@@ -11,7 +11,7 @@ import { JobmodalComponent } from './jobmodal/jobmodal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 
-
+import {MatDialogModule} from '@angular/material/dialog'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +25,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserAnimationsModule,
     MatSlideToggleModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

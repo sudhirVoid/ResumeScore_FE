@@ -29,6 +29,6 @@ export class JobmodalComponent {
 
 
   jobVacencySubmit() {
-    console.log(this.jobVacencyForm.value.companyName)
+    console.log(this.jobVacencyForm.value)
   }
 }
