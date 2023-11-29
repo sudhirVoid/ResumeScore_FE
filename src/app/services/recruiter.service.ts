@@ -26,4 +26,7 @@ export class RecruiterService {
     return this.http.get<any>(`${environment.baseUrl}/api/jobTypes`)
   }
 
+  getAllJobPosts(){
+    return this.http.get<any>(`${environment.baseUrl}/api/getJobPost`)
+  }
 }

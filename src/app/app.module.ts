@@ -13,12 +13,21 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 import {MatDialogModule} from '@angular/material/dialog'; 
 import { HttpClientModule } from '@angular/common/http';
+import { JobcardComponent } from './jobcard/jobcard.component';
+import {MatIconModule} from '@angular/material/icon';
+import { TruncatePipe } from './pipes/truncate.pipe';
+import { PriceCommaSeperatedPipe } from './pipes/price-comma-seperated.pipe';
+import { JobAllDetailsComponent } from './job-all-details/job-all-details.component';
 @NgModule({
   declarations: [
     AppComponent,
     JobPageComponent,
     JobmodalComponent,
     NavbarComponent,
+    JobcardComponent,
+    TruncatePipe,
+    PriceCommaSeperatedPipe,
+    JobAllDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

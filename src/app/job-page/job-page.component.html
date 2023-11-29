@@ -26,3 +26,10 @@
           </button>
     </div>
 </div>
+<!-- body of this -->
+<div class="allPosts flex justify-start flex-wrap">
+    <ng-container *ngFor="let job of jobs">
+        <app-jobcard [jobPostData]="job"></app-jobcard>
+    </ng-container>
+    
+</div>

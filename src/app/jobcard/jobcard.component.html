@@ -1,0 +1,75 @@
+<div class="jobCard ring-5 relative mx-10 my-3 w-5/6 min-w-fit  rounded-xl bg-slate-600 px-5 pb-8 pt-3 text-white shadow ring-gray-900/5 transition duration-100 hover:scale-110 hover:cursor-pointer hover:bg-slate-500 hover:shadow-2xl hover:shadow-gray-900 hover:outline-blue-900 hover:delay-300">
+  <div class="title"><p class="oara font-mono text-lg font-bold">{{jobPostData?.jobtitle}}</p></div>
+  <div class="title mb-3">
+    <a class="oara font-mono text-lg font-bold" target="_blank" href={{jobPostData?.companywebsite}}>{{jobPostData?.companyname}}</a>
+</div>
+  <div class="companyNameLogo flex justify-start font-mono">
+    <div class="flex justify-center items-center">
+      <div class="">
+        <mat-icon class="jobCardIcon">work</mat-icon>
+      </div>
+      <div class="flex justify-center items-center w-8/10 basis-5/6 font-mono">
+        <p>{{jobPostData?.experience}} years </p>
+      </div>
+    </div>
+
+    <div class="pr-1 pl-1 opacity-25 ">|</div>
+
+    <div class="flex justify-center items-center">
+      <div class="">
+        <mat-icon class="jobCardIcon">attach_money</mat-icon>
+      </div>
+      <div class="flex justify-center items-center w-8/10 basis-5/6 font-mono">
+        <p>{{jobPostData?.salaryrange | priceCommaSeperated}}</p>
+      </div>
+    </div>
+
+    <div class="pr-1 pl-1 opacity-25">|</div>
+
+    <div class="flex justify-center items-center">
+      <div class="">
+        <mat-icon class="jobCardIcon">location_on</mat-icon>
+        </div>
+        <div class="flex justify-center items-center w-8/10 basis-5/6 font-mono">
+          <p>{{jobPostData?.joblocation}}</p>
+        </div>
+      </div>
+  </div>
+
+  <div class="companyNameLogo flex justify-start font-mono">
+    <div class="flex justify-center items-center">
+      <div class="">
+        <mat-icon class="jobCardIcon">tag</mat-icon>
+      </div>
+      <p class="w-8/10 basis-5/6 font-mono">{{jobPostData?.qualification}}</p>
+    </div>
+  </div>
+
+    <div class="flex justify-start items-center">
+      <div class="flex justify-center items-center">
+        <mat-icon class="jobCardIcon">notes</mat-icon>
+      </div>
+      <p class="w-8/10 basis-5/6 font-mono">{{jobPostData?.jobdescription | truncate:[26]}}</p>
+    </div>
+
+  <div class="postedago absolute right-0 pt-1">
+
+      <span *ngIf="isDaysAgo" class="mr-2 inline-flex items-center rounded border border-gray-500 bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800 dark:bg-gray-700 dark:text-gray-400">
+        <svg class="mr-1.5 h-2.5 w-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm3.982 13.982a1 1 0 0 1-1.414 0l-3.274-3.274A1.012 1.012 0 0 1 9 10V6a1 1 0 0 1 2 0v3.586l2.982 2.982a1 1 0 0 1 0 1.414Z" />
+        </svg>
+        {{daysAgo}}
+      </span>
+
+
+
+    <span  *ngIf="!isDaysAgo" class="mr-1 bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">
+      <svg class="w-2.5 h-2.5 mr-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm3.982 13.982a1 1 0 0 1-1.414 0l-3.274-3.274A1.012 1.012 0 0 1 9 10V6a1 1 0 0 1 2 0v3.586l2.982 2.982a1 1 0 0 1 0 1.414Z"/>
+      </svg>
+      {{daysAgo}}
+    </span>
+  </div>
+  </div>
+
+
